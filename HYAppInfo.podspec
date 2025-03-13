@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HYAppInfo"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "获取应用信息"
 
   # This description is used to generate tags and improve search results.
@@ -138,5 +138,10 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
+  
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'arm64'
+  }
 
 end
