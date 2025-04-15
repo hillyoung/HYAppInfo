@@ -94,12 +94,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "*.{h,m}"
-  spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
+#  spec.source_files  = "Classes", "*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
-
+  spec.public_header_files = "Classes/**/*.h"
+  spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -125,7 +123,7 @@ Pod::Spec.new do |spec|
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
+  spec.libraries = "objc"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -138,10 +136,12 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  
+  spec.dependency "HYLibrary"
+
   spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'arm64'
+#    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+#    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'arm64'
+    "ARCHS" => "arm64 x86_64"  # 只支持 arm64 和 x86_64
   }
 
 end
