@@ -96,7 +96,7 @@ Pod::Spec.new do |spec|
 
 #  spec.source_files  = "Classes", "*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "HYAppInfo.h"
   spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
