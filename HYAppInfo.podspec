@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HYAppInfo"
-  spec.version      = "1.0.5"
+  spec.version      = "1.0.6"
   spec.summary      = "获取应用信息"
 
   # This description is used to generate tags and improve search results.
@@ -98,6 +98,7 @@ Pod::Spec.new do |spec|
   # spec.exclude_files = "Classes/Exclude"
   spec.public_header_files = "*.h"
   spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
+  spec.ios.vendored_libraries = 'libAppInfo.a'  # 指定不支持模拟器
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
