@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HYAppInfo"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "获取应用信息"
 
   # This description is used to generate tags and improve search results.
@@ -72,9 +72,9 @@ Pod::Spec.new do |spec|
   # spec.tvos.deployment_target = "9.0"
   # spec.visionos.deployment_target = "1.0"
   spec.pod_target_xcconfig = {
-    'VALID_ARCHS' => 'x86_64 arm64',
-    'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64',
-    'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+    'VALID_ARCHS' => 'arm64 x86_64',
+    # 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64',
+    # 'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
   }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
