@@ -94,9 +94,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-#  spec.source_files  = "Classes", "*.{h,m}"
+  spec.source_files  = "*.h"
   # spec.exclude_files = "Classes/Exclude"
-  spec.public_header_files = "HYAppInfo.h"
+  spec.public_header_files = "*.h"
   spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
