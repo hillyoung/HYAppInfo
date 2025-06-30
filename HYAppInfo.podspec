@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HYAppInfo"
-  spec.version      = "1.0.9"
+  spec.version      = "1.0.10"
   spec.summary      = "获取应用信息"
 
   # This description is used to generate tags and improve search results.
@@ -71,11 +71,11 @@ Pod::Spec.new do |spec|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
   # spec.visionos.deployment_target = "1.0"
-  spec.pod_target_xcconfig = {
-    'VALID_ARCHS' => 'arm64 x86_64',
-    # 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64',
-    # 'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
-  }
+#  spec.pod_target_xcconfig = {
+#    'VALID_ARCHS' => 'arm64 x86_64',
+#     'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64',
+#     'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+#  }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -97,8 +97,10 @@ Pod::Spec.new do |spec|
   spec.source_files  = "*.h"
   # spec.exclude_files = "Classes/Exclude"
   spec.public_header_files = "*.h"
-  spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
-  spec.ios.vendored_libraries = 'libAppInfo.a'  # 指定不支持模拟器
+#  spec.vendored_libraries = "libAppInfo.a"  # 指定静态库路径
+#  spec.ios.vendored_libraries = 'libAppInfo.a'  # 指定不支持模拟器
+  spec.vendored_frameworks = 'HYAppInfo.xcframework'
+#  spec.public_header_files = 'HYAppInfo.xcframework/Headers/**/*.h'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -139,10 +141,10 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency "HYLibrary"
 
-  spec.pod_target_xcconfig = {
+#  spec.pod_target_xcconfig = {
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
 #    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'arm64'
-    "ARCHS" => "arm64 x86_64"  # 只支持 arm64 和 x86_64
-  }
+#    "ARCHS" => "arm64 x86_64"  # 只支持 arm64 和 x86_64
+#  }
 
 end
